@@ -1,0 +1,546 @@
+<!-- Lord of the Bricks – Best-Selling Parts | Updated: 21 March 2026 -->
+<style>
+/* ── Lord of the Bricks · Top-Seller Grid ── */
+#lotb-ts {
+  font-family: Georgia, 'Times New Roman', serif;
+  max-width: 100%;
+  background: #152415;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,.5);
+}
+#lotb-ts .ts-header {
+  background: #0e1a0e;
+  padding: 18px 20px 14px;
+  border-bottom: 2px solid #c9a435;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+#lotb-ts .ts-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #c9a435;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#lotb-ts .ts-period {
+  font-size: 11px;
+  color: #7a9b72;
+  margin: 0;
+  font-style: italic;
+  font-family: Arial, sans-serif;
+}
+#lotb-ts .ts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 16px;
+  background: #152415;
+}
+#lotb-ts .ts-card {
+  background: #1c301c;
+  border: 1px solid rgba(201,164,53,.2);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color .2s, box-shadow .2s;
+}
+#lotb-ts .ts-card:hover {
+  border-color: rgba(201,164,53,.7);
+  box-shadow: 0 0 14px rgba(201,164,53,.15);
+}
+#lotb-ts .ts-rank {
+  position: absolute;
+  top: 6px; left: 6px;
+  background: rgba(21,36,21,.85);
+  color: #7a9b72;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  padding: 2px 7px;
+  border-radius: 20px;
+  border: 1px solid rgba(201,164,53,.2);
+  z-index: 1;
+  letter-spacing: .5px;
+}
+#lotb-ts .ts-rank-1 {
+  background: rgba(201,164,53,.2);
+  color: #c9a435;
+  border-color: #c9a435;
+  font-size: 11px;
+}
+#lotb-ts .ts-rank-2 {
+  background: rgba(160,160,160,.15);
+  color: #b0b0b0;
+  border-color: rgba(160,160,160,.4);
+}
+#lotb-ts .ts-rank-3 {
+  background: rgba(139,90,43,.2);
+  color: #c07840;
+  border-color: rgba(139,90,43,.5);
+}
+#lotb-ts .ts-img-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #213221;
+  padding: 24px 8px 8px;
+  height: 112px;
+  text-decoration: none;
+}
+#lotb-ts .ts-img-link img {
+  max-height: 78px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+}
+#lotb-ts .ts-info {
+  padding: 8px 10px 4px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+#lotb-ts .ts-partno {
+  font-size: 10px;
+  color: #5a7a52;
+  font-family: 'Courier New', monospace;
+  letter-spacing: .5px;
+}
+#lotb-ts .ts-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #e8dfc0;
+  line-height: 1.4;
+  font-family: Arial, sans-serif;
+}
+#lotb-ts .ts-color {
+  font-size: 10px;
+  color: #6a8a62;
+  font-style: italic;
+  font-family: Arial, sans-serif;
+}
+#lotb-ts .ts-stats {
+  padding: 6px 10px 8px;
+  background: #0e1a0e;
+  border-top: 1px solid rgba(201,164,53,.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+#lotb-ts .ts-qty {
+  font-size: 11px;
+  font-weight: 700;
+  color: #c9a435;
+  font-family: Arial, sans-serif;
+  letter-spacing: .3px;
+}
+#lotb-ts .ts-orders {
+  font-size: 10px;
+  color: #5a7a52;
+  font-family: Arial, sans-serif;
+}
+#lotb-ts .ts-footer {
+  background: #0e1a0e;
+  border-top: 1px solid rgba(201,164,53,.2);
+  padding: 8px 16px;
+  font-size: 10px;
+  color: #4a6a42;
+  text-align: right;
+  font-family: Arial, sans-serif;
+}
+#lotb-ts .ts-footer a {
+  color: #6a9060;
+  text-decoration: none;
+}
+#lotb-ts .ts-footer a:hover { color: #c9a435; }
+@media (max-width: 700px) {
+  #lotb-ts .ts-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 10px; }
+  #lotb-ts .ts-header h3 { font-size: 15px; }
+}
+@media (max-width: 380px) {
+  #lotb-ts .ts-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+<div id="lotb-ts">
+  <div class="ts-header">
+    <h3>⚔ Best-Selling Parts</h3>
+    <p class="ts-period">
+      September 2025 – March 2026
+      &nbsp;·&nbsp; Top 20 by units sold
+    </p>
+  </div>
+  <div class="ts-grid">
+
+        <div class="ts-card">
+          <span class="ts-rank ts-rank-1">⚔ #1</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=98283" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/86/98283.png"
+                 alt="Brick, Modified 1 x 2 with Masonry Profile"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">98283</span>
+            <span class="ts-name">Brick, Modified 1 x 2 with Masonry Profile</span>
+            <span class="ts-color">Light Bluish Gray</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">1,727 times sold</span>
+            <span class="ts-orders">12 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank ts-rank-2"># 2</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=98138" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/1/98138.png"
+                 alt="Tile, Round 1 x 1"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">98138</span>
+            <span class="ts-name">Tile, Round 1 x 1</span>
+            <span class="ts-color">White</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">875 times sold</span>
+            <span class="ts-orders">5 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank ts-rank-3"># 3</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=87079" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/1/87079.png"
+                 alt="Tile 2 x 4"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">87079</span>
+            <span class="ts-name">Tile 2 x 4</span>
+            <span class="ts-color">White</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">831 times sold</span>
+            <span class="ts-orders">15 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#4</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3024" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/1/3024.png"
+                 alt="Plate 1 x 1"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3024</span>
+            <span class="ts-name">Plate 1 x 1</span>
+            <span class="ts-color">White</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">778 times sold</span>
+            <span class="ts-orders">13 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#5</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=2682" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/80/2682.png"
+                 alt="Plant Plate, Round 1 x 1 with Curved, Upright Leaf"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">2682</span>
+            <span class="ts-name">Plant Plate, Round 1 x 1 with Curved, Uprigh…</span>
+            <span class="ts-color">Dark Green</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">710 times sold</span>
+            <span class="ts-orders">4 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#6</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3023" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/86/3023.png"
+                 alt="Plate 1 x 2"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3023</span>
+            <span class="ts-name">Plate 1 x 2</span>
+            <span class="ts-color">Light Bluish Gray</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">599 times sold</span>
+            <span class="ts-orders">12 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#7</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=2682" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/6/2682.png"
+                 alt="Plant Plate, Round 1 x 1 with Curved, Upright Leaf"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">2682</span>
+            <span class="ts-name">Plant Plate, Round 1 x 1 with Curved, Uprigh…</span>
+            <span class="ts-color">Green</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">583 times sold</span>
+            <span class="ts-orders">8 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#8</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3004" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/11/3004.png"
+                 alt="Brick 1 x 2"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3004</span>
+            <span class="ts-name">Brick 1 x 2</span>
+            <span class="ts-color">Black</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">575 times sold</span>
+            <span class="ts-orders">10 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#9</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3023" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/11/3023.png"
+                 alt="Plate 1 x 2"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3023</span>
+            <span class="ts-name">Plate 1 x 2</span>
+            <span class="ts-color">Black</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">552 times sold</span>
+            <span class="ts-orders">25 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#10</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3069" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/1/3069.png"
+                 alt="Tile 1 x 2"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3069</span>
+            <span class="ts-name">Tile 1 x 2</span>
+            <span class="ts-color">White</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">414 times sold</span>
+            <span class="ts-orders">18 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#11</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3070" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/15/3070.png"
+                 alt="Tile 1 x 1"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3070</span>
+            <span class="ts-name">Tile 1 x 1</span>
+            <span class="ts-color">Trans-Light Blue</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">405 times sold</span>
+            <span class="ts-orders">4 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#12</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3023" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/1/3023.png"
+                 alt="Plate 1 x 2"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3023</span>
+            <span class="ts-name">Plate 1 x 2</span>
+            <span class="ts-color">White</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">354 times sold</span>
+            <span class="ts-orders">17 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#13</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3004" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/1/3004.png"
+                 alt="Brick 1 x 2"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3004</span>
+            <span class="ts-name">Brick 1 x 2</span>
+            <span class="ts-color">White</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">344 times sold</span>
+            <span class="ts-orders">7 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#14</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3024" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/86/3024.png"
+                 alt="Plate 1 x 1"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3024</span>
+            <span class="ts-name">Plate 1 x 1</span>
+            <span class="ts-color">Light Bluish Gray</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">325 times sold</span>
+            <span class="ts-orders">11 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#15</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=11211" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/11/11211.png"
+                 alt="Brick, Modified 1 x 2 with Studs on 1 Side"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">11211</span>
+            <span class="ts-name">Brick, Modified 1 x 2 with Studs on 1 Side</span>
+            <span class="ts-color">Black</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">323 times sold</span>
+            <span class="ts-orders">10 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#16</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=98283" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/85/98283.png"
+                 alt="Brick, Modified 1 x 2 with Masonry Profile"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">98283</span>
+            <span class="ts-name">Brick, Modified 1 x 2 with Masonry Profile</span>
+            <span class="ts-color">Dark Bluish Gray</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">322 times sold</span>
+            <span class="ts-orders">5 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#17</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3023" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/12/3023.png"
+                 alt="Plate 1 x 2"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3023</span>
+            <span class="ts-name">Plate 1 x 2</span>
+            <span class="ts-color">Trans-Clear</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">299 times sold</span>
+            <span class="ts-orders">11 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#18</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3020" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/11/3020.png"
+                 alt="Plate 2 x 4"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3020</span>
+            <span class="ts-name">Plate 2 x 4</span>
+            <span class="ts-color">Black</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">298 times sold</span>
+            <span class="ts-orders">11 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#19</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3069" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/11/3069.png"
+                 alt="Tile 1 x 2"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3069</span>
+            <span class="ts-name">Tile 1 x 2</span>
+            <span class="ts-color">Black</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">287 times sold</span>
+            <span class="ts-orders">12 orders</span>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-rank">#20</span>
+          <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3070" target="_blank" rel="nofollow noreferrer" class="ts-img-link">
+            <img src="https://img.bricklink.com/ItemImage/PN/1/3070.png"
+                 alt="Tile 1 x 1"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 60'%3E%3Crect x='4' y='20' width='72' height='36' rx='4' fill='%23e3000b'/%3E%3Cellipse cx='20' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='40' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3Cellipse cx='60' cy='20' rx='8' ry='5' fill='%23c20009'/%3E%3C/svg%3E'"
+                 loading="lazy" />
+          </a>
+          <div class="ts-info">
+            <span class="ts-partno">3070</span>
+            <span class="ts-name">Tile 1 x 1</span>
+            <span class="ts-color">White</span>
+          </div>
+          <div class="ts-stats">
+            <span class="ts-qty">287 times sold</span>
+            <span class="ts-orders">16 orders</span>
+          </div>
+        </div>
+  </div>
+  <p class="ts-footer">
+    Updated: 21 March 2026 &nbsp;·&nbsp;
+    <a href="https://www.lord-of-the-bricks.com" target="_blank">lord-of-the-bricks.com</a>
+  </p>
+</div>
